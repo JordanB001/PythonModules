@@ -61,7 +61,7 @@ def maximumOfArray(array):
 
 def duplicateArray(array, valueDuplicate):
     """
-
+    Count the number of occurrences
     :param array:
     :param valueDuplicate:
     :return:
@@ -72,7 +72,32 @@ def duplicateArray(array, valueDuplicate):
             numberDuplicate += 1
     return numberDuplicate
 
+def createEntryArrayInt(numberElement):
+    """
+    Create an array of number Element integers
+    :param numberElement: int : number of elements in the array
+    :return: array
+    """
+    array = []
+    while len(array) != numberElement:
+        try:
+            array.append(int(input("Enter an Integer :")))
+        except ValueError:
+            print("It's not an Integer!")
+    return array
 
-
-
+def FindValueArray(array, valueToFind):
+    """
+    Finds if the value is in the array and returns the first index
+    :param array: the array where the search will be carried out
+    :param valueToFind: value to find in the array
+    :return: returns the index of where the value is located
+    """
+    i = 0
+    while (i < len(array)) and (array[i] != valueToFind):
+        i += 1
+    if i < len(array):
+        return i
+    else:
+        print("Value not find")
 
